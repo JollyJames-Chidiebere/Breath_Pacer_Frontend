@@ -1,18 +1,19 @@
 module.exports = {
-  extends: 'expo',
+  root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        '@typescript-eslint/no-shadow': ['error'],
-        'no-shadow': 'off',
-        'no-undef': 'off',
-      },
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
     },
-  ],
+    project: './tsconfig.json',
+  },
+  plugins: ['@typescript-eslint'],
+  extends: ['expo'],
+  rules: {
+    '@typescript-eslint/no-shadow': ['error'],
+    'no-shadow': 'off',
+    'no-undef': 'off',
+  },
 };
-
-
-
