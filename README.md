@@ -101,7 +101,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Author
 
-**Wallace Godwin Besombe Divine**
+**Wallace Godwin Besombe Divine** and
+
 **JollyJames-Chidiebere**
 
 ## Links
