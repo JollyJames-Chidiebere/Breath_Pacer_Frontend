@@ -144,7 +144,7 @@ export default function SettingsScreen() {
       const user = auth.currentUser;
       if (!user) return Alert.alert("Not signed in", "Please log in first.");
       const token = await user.getIdToken();
-      const res = await API.get("/sessions/", {
+      const res = await API.get("/api/sessions/", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.data?.length > 0) {
@@ -174,7 +174,7 @@ export default function SettingsScreen() {
       }
       const token = await user.getIdToken();
       await API.post(
-        "/sessions/",
+        "/api/sessions/",
         {
           duration_seconds: sessionMinutes * 60,
           inhale_seconds: inhale,
